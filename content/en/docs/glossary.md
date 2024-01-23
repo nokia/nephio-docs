@@ -85,7 +85,7 @@ See [Hydration](#hydration).
 
 ## DRY
 This is a common software engineering term that stands for [Don't Repeat
-Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).  DRY attempts
+Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself,).  DRY attempts
 to reduce repetition in software development. In the Kubernetes configuration
 management context, a good example is a Helm chart, which attempts to abstract
 the particular manifests for a given workload. A kpt package that is not yet
