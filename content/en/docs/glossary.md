@@ -340,9 +340,9 @@ example, to produce variants that are affected by both environment and cluster).
 
 ## WET
 
-This term, which we use as an acronym for "Write Every Time", comes from [software
-engineering](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and is a somewhat pejorative term in contrast to
-[DRY](#dry). However, in the context of *configuration-as-data*, rather than *code*, the idea of storing the
+This term, which we use as an acronym for "Write Every Time", comes from
+[software engineering](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), and is a somewhat pejorative term in
+contrast to [DRY](#dry). However, in the context of *configuration-as-data*, rather than *code*, the idea of storing the
 configuration as fully-formed data enables automation and the use of data-management techniques to manage the
 configuration at scale.
 
