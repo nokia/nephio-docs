@@ -16,11 +16,11 @@ Then, we can utilize the flux Custom Resources defined in another test kpt packa
 
 ##  Prerequisites:
 
-* [Nephio R1 sandbox]({{< ref "/docs/guides/install-guides/" >}}): Set up the Nephio sandbox environment.
-* [Access to the Nephio Web UI]({{< ref "/docs/guides/install-guides/#access-to-the-user-interfaces" >}})
-* [Nephio R1 sandbox workload clusters]({{< ref "/docs/guides/user-guides/exercise-1-free5gc.md" >}}):
+* [Nephio R1 sandbox]/content/en/docs/guides/install-guides/install-guides/_index.md): Set up the Nephio sandbox environment.
+* [Access to the Nephio Web UI](/content/en/docs/guides/install-guides/_index.md#access-to-the-user-interfaces)
+* [Nephio R1 sandbox workload clusters](/content/en/docs/guides/user-guides/exercise-1-free5gc.md):
   Create/Deploy the predefined set of workload clusters by completing the Free5GC Core quick start exercises up to and including
-  [Step 3]({{< ref "/docs/guides/user-guides/exercise-1-free5gc.md#step-3-deploy-two-edge-clusters" >}}).
+  [Step 3](/content/en/docs/guides/user-guides/exercise-1-free5gc.md#step-3-deploy-two-edge-clusters).
 
 ### Deploying the flux-helm-controllers pkg
 
@@ -31,22 +31,22 @@ cluster.
 
 * **Step 1**
 
-![Install flux controllers - Step 1](/images/user-guides/nephio-ui-edge02-deployment.png)
+![Install flux controllers - Step 1](/static/images/user-guides/nephio-ui-edge02-deployment.png)
 
 * **Step 2**
 
-![Install flux controllers - Step 2](/images/user-guides/add-deployment-selection.png)
+![Install flux controllers - Step 2](/static/images/user-guides/add-deployment-selection.png)
 
 * **Step 3**
 
-![Install flux controllers - Step 3](/images/user-guides/flux-controller-selection.png)
+![Install flux controllers - Step 3](/static/images/user-guides/flux-controller-selection.png)
 
 Click through the `Next` button until you are through all the steps, leaving all options as `default`, then click
 `Create Deployment`.
 
 * **Step 4**
 
-![Install flux controllers - Step 4](/images/user-guides/select-create-deployment.png)
+![Install flux controllers - Step 4](/static/images/user-guides/select-create-deployment.png)
 
 At this point, we can take a closer look at the contents of the kpt package which contains the relevant kubernetes
 resources to deploy the controllers.
@@ -57,11 +57,11 @@ Finally, we need to `propose` and then `approve` the pkg to initialize the deplo
 
 * **Step 5**
 
-![Install flux controllers - Step 5](/images/user-guides/propose-selection.png)
+![Install flux controllers - Step 5](/static/images/user-guides/propose-selection.png)
 
 * **Step 6**
 
-![Install flux controllers - Step 6](/images/user-guides/approve-selection.png)
+![Install flux controllers - Step 6](/static/images/user-guides/approve-selection.png)
 
 Shortly thereafter, you should see flux helm and source controllers in the flux-system namespace:
 
@@ -107,21 +107,21 @@ EOF
 ```
 The new repository should now have been added to the `External Blueprints` section of the UI.
 
-![External Blueprints UI](/images/user-guides/external-bp-repos.png)
+![External Blueprints UI](/static/images/user-guides/external-bp-repos.png)
 
 From here, we can see the onlineboutique-flux pkg to be deployed.
 
-![online boutique pkg](/images/user-guides/nephio-pkgs-onlineboutique-show.png)
+![online boutique pkg](/static/images/user-guides/nephio-pkgs-onlineboutique-show.png)
 
 The HelmRepository Custom Resource within the kpt pkg refers to the official 
 [online boutique helm charts repo.](https://github.com/GoogleCloudPlatform/microservices-demo/tree/main/helm-chart)
 
-![HelmRepo online boutique ref](/images/user-guides/helmrepo-onlineboutique-ref.png)
+![HelmRepo online boutique ref](/static/images/user-guides/helmrepo-onlineboutique-ref.png)
 
 To deploy the pkg, repeat/follow **Steps 1 - 6** from above, replacing **Step 3** with the following. Take note of the
 source repo and the package to be deployed.
 
-![Add acm pkg](/images/user-guides/add-deploy-onlinebout-select.png)
+![Add acm pkg](/static/images/user-guides/add-deploy-onlinebout-select.png)
 
 **_NOTE:_**  The overrides online-boutique-values ConfigMap in the package refers to the default values.yaml for the
 chart and can be customized prior to pkg approval.

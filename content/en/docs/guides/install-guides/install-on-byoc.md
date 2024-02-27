@@ -31,6 +31,7 @@ your environment and choices.
  - `kubectl` [installed ](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)on your workstation
  - `kpt` [installed](https://kpt.dev/installation/kpt-cli) on your workstation
    (version v1.0.0-beta.43 or later)
+ - `porchctl` [installed](https://github.com/nephio-project/porch/releases) on your workstation
  - Sudo-less `docker`, `podman`, or `nerdctl`. If using `podman` or `nerdctl`,
    you must set the
 [`KPT_FN_RUNTIME`](https://kpt.dev/reference/cli/fn/render/?id=environment-variables)
@@ -67,9 +68,9 @@ options, if you wish to assemble your own set of components.
 
 | Environment | Description                                                |
 | ----------- | ---------------------------------------------------------- |
-| [Single VM]({{< relref "install-on-single-vm.md" >}}) | The single VM demo environment, set up "the hard way" - without using the included provisioning script. This creates a complete Nephio-in-a-VM, just like the R1 demo environment. These instructions cover both Ubuntu and Fedora. |
-| [Google Cloud Platform]({{< relref "install-on-gcp.md" >}}) | Nephio running in GCP. A GKE cluster is used as the management cluster, with Anthos Config Controller for GCP infrastructure provisioning, Gitea as the Git provider, and Web UI authentication and authorization via Google OAuth 2.0 |
-| [OpenShift]({{< relref "install-on-openshift.md" >}}) | Nephio running in OpenShift, with Cluster API as the cluster provisioner, Gitea as the Git provider and Web UI authentication backed by Open Shift OIDC. |
+| [Single VM](/content/en/docs/guides/install-guides/install-on-single-vm.md) | The single VM demo environment, set up "the hard way" - without using the included provisioning script. This creates a complete Nephio-in-a-VM, just like the R1 demo environment. These instructions cover both Ubuntu and Fedora. |
+| [Google Cloud Platform](/content/en/docs/guides/install-guides/install-on-gcp.md) | Nephio running in GCP. A GKE cluster is used as the management cluster, with Anthos Config Controller for GCP infrastructure provisioning, Gitea as the Git provider, and Web UI authentication and authorization via Google OAuth 2.0 |
+| [OpenShift](/content/en/docs/guides/install-guides/install-on-openshift.md) | Nephio running in OpenShift, with Cluster API as the cluster provisioner, Gitea as the Git provider and Web UI authentication backed by Open Shift OIDC. |
 
 ## A La Carte Installation
 
@@ -146,8 +147,8 @@ development it must not be exposed on the internet (for example, via a
 LoadBalancer service, Ingress, or Route).
 
 The WebUI currently supports the following options:
-- [Google OAuth or OIDC]({{< relref "webui-auth-gcp.md" >}})
-- [OIDC with Okta]({{< relref "webui-auth-okta.md" >}})
+- [Google OAuth or OIDC](/content/en/docs/guides/install-guides/webui-auth-gcp.md)
+- [OIDC with Okta](/content/en/docs/guides/install-guides/webui-auth-okta.md)
 
 ### Nephio Stock Repositories
 
